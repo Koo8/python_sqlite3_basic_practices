@@ -120,7 +120,7 @@ update major set professor = 'Miss. Lopez' where id ==6 ;
 cursor.execute('''
 select student.name, student.age, major.majorName, major.professor 
 from student join major 
-where student.major == major.id;''')
+ON student.major == major.id;''')
 print(len(cursor.fetchall()))
 # [('john smith', 22, 'cs', 'Mr. Johnson'), 
 # ('nancy', 70, 'economy', 'Mrs. Alice'), 
